@@ -9,10 +9,7 @@ import BookList from "./components/BookList"
 const App = () => (
   <>
     <MyNavbar />
-
     <WarningSign text="I'm a Warning" />
-    <MyBadge text="I'm a Badge" color="danger" />
-
     <BookList books={scifiBooks} />
   </>
 )

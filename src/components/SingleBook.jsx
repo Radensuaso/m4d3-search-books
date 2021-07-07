@@ -1,4 +1,5 @@
-import { Button, Card } from "react-bootstrap"
+import { Card } from "react-bootstrap"
+import MyBadge from "./MyBadge"
 
 const SingleBook = (props) => (
   <Card>
@@ -9,7 +10,7 @@ const SingleBook = (props) => (
         <strong>Category: </strong>
         {props.book.category}
       </Card.Text>
-      <Button variant="success">€{props.book.price}</Button>
+      <MyBadge color={"success"} text={"€ " + props.book.price} />
     </Card.Body>
   </Card>
 )
