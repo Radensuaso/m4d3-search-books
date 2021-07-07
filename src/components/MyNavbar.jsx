@@ -1,11 +1,4 @@
-import {
-  Button,
-  Container,
-  Form,
-  FormControl,
-  Nav,
-  Navbar,
-} from "react-bootstrap"
+import { Container, Nav, Navbar } from "react-bootstrap"
 
 const MyNavbar = () => (
   <Navbar bg="dark" variant="dark">
@@ -14,10 +7,6 @@ const MyNavbar = () => (
       <Nav className="mr-auto">
         <Nav.Link href="#home">Home</Nav.Link>
       </Nav>
-      <Form inline>
-        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-        <Button variant="outline-info">Search</Button>
-      </Form>
     </Container>
   </Navbar>
 )
