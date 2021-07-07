@@ -1,26 +1,17 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap"
-import fantasyBooks from "../data/fantasy.json"
+import { Button, Card } from "react-bootstrap"
 
-const SingleBook = () => (
-  <>
-    <Container>
-      <h1 className="text-center my-5">{fantasyBooks[0].title}</h1>
-      <Row className="justify-content-center">
-        <Col xs={12} sm={10} md={8} lg={6}>
-          <Card>
-            <Card.Img variant="top" src={fantasyBooks[0].img} />
-            <Card.Body>
-              <Card.Title>
-                <strong>Category: </strong>
-                {fantasyBooks[0].category}
-              </Card.Title>
-              <Button variant="success">€{fantasyBooks[0].price}</Button>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-    </Container>
-  </>
+const SingleBook = (props) => (
+  <Card>
+    <Card.Img variant="top" src={props.book.img} />
+    <Card.Body>
+      <Card.Title>{props.book.title}</Card.Title>
+      <Card.Text>
+        <strong>Category: </strong>
+        {props.book.category}
+      </Card.Text>
+      <Button variant="success">€{props.book.price}</Button>
+    </Card.Body>
+  </Card>
 )
 
 export default SingleBook
