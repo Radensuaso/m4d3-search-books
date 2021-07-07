@@ -1,10 +1,12 @@
 import "./App.css"
 import "bootstrap/dist/css/bootstrap.min.css"
-import BookSearchNavbar from "./components/BookSearchNavbar"
+import MyNavbar from "./components/MyNavbar"
+import SingleBook from "./components/SingleBook"
 
 const App = () => (
   <>
-    <BookSearchNavbar />
+    <MyNavbar />
+    <SingleBook />
   </>
 )
 
