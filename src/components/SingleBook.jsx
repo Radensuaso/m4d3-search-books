@@ -8,18 +8,16 @@ class SingleBook extends Component {
     selected: false,
   }
 
-  handleSelect = (e) => {
-    this.setState((prevState) => ({
-      selected: true,
-    }))
-    if (this.state.selected) {
-      e.currentTarget.classList.add("bg-primary", "text-white")
-    }
-  }
-
   render() {
     return (
-      <Card onClick={(e) => this.handleSelect(e)}>
+      <Card
+        className={this.state.selected ? "bg-primary text-white" : ""}
+        onClick={(e) =>
+          this.setState((e) => ({
+            selected: !this.state.selected,
+          }))
+        }
+      >
         <Card.Img
           className="img-fluid"
           variant="top"
